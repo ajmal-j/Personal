@@ -1,3 +1,14 @@
+function run(){
+    const name1=document.getElementById("name").value;
+    const emailcheck=document.getElementById("email").value;
+    if((isNaN(name1))&&(emailcheck.includes("@"))){
+        sendMail();
+    }
+    else {
+        alert('Mail not Sended.\nWrong Email or Name!!');
+    }
+}
+
 function sendMail(){
     var params={
         name: document.getElementById("name").value,
